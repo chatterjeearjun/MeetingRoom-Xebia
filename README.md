@@ -1,0 +1,2 @@
+# MeetingRoom-Xebia
+As a  employee I wwant to Book a meeting  room for a given time slot   As a employee I want to check  if booking  room is available   for booking  in the  time  As an employee I want to see a list of available booking rooms   As an Employee I want to see a list of available booking rooms which fulfils certain criteria e.g ( min 50 seater , large display screen , wifi conection  etc )     The booking fees for booking a room is 2 Rs / hour . As a admin user I want to see the total expense report for all  or specific employees against room booking chanrges 
