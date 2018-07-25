@@ -1,0 +1,6 @@
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer\bin\Debug\Ttf.BusinessLayer.dll
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer\bin\Debug\Ttf.BusinessLayer.pdb
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer\obj\Debug\Ttf.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer\obj\Debug\Ttf.BusinessLayer.dll
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer\obj\Debug\Ttf.BusinessLayer.pdb
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer\obj\Debug\Ttf.BusinessLayer.csprojResolveAssemblyReference.cache

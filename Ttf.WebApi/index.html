@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Meeting Room Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #eee;
+        }
+
+        #the-form {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        #the-form .form-heading,
+        #the-form .checkbox {
+            margin-bottom: 10px;
+        }
+
+        #the-form .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #the-form .form-control:focus {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <h1>Search for the avilable meeting rooms - </h1>
+            <div id="div_content">
+
+                <div>Room Names </div>
+                <select id="ddlRoom">
+                    <option value="0">- Select -</option>
+                </select>
+                <div class="clear"></div>
+
+                <div>Features </div>
+                <select id="ddlFeatures">
+                    <option value="0">- Select -</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <table id="Products" class="Products">
+                <thead>
+                    <tr>
+                        <th>RoomID</th>
+                        <th style="padding-left:10px;">RoomName</th>
+                        <th style="padding-left:10px;">Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+     </div> <!-- /container -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "api/v1/foo",
+                    contentType: "application/json",
+                    success: function (res) {
+                        $.each(res.RoomList, function (data, value) {
+
+                            $("#ddlRoom").append($("<option></option>").val(value.RoomID).html(value.RoomName));
+                        })
+
+                        $.each(res.FeatureList, function (data, value) {
+
+                            $("#ddlFeatures").append($("<option></option>").val(value.FeatureID).html(value.FeatureName));
+                        })
+                    }
+                });
+            })
+
+
+            $('#ddlRoom').on('change', function () {
+                //var query = "RoomID = '" + this.value+"' ; RoomName = 'Test'";
+                var query = 'RoomID = ' + this.value;
+                $.ajax({
+                    type: "GET",
+                    url: "api/v1/roomFilteredData" + '?' + query,
+                    contentType: "application/json",
+                    success: function (res) {
+                        $("#Products tbody th").remove();
+                        var tableBody = $('#Products tbody');
+                        tableBody.append($("<th style='padding- left:10px;'></th>").html(res.RoomID));
+                        tableBody.append($("<th style='padding- left:20px;'></th>").html(res.RoomName));
+                        $.each(res.Features, function (data, value) {
+
+                            $("#ddlFeatures").append($("<th style='padding- left:10px;'></th>").html(value.FeatureName));
+                        })
+                    }
+                });
+            })
+
+
+            $('#ddlFeatures').on('change', function () {
+                //var query = "FeatureID = '" + this.value + "' ; FeatureName = 'Test'";
+                var query = '';
+                $.ajax({
+                    type: "GET",
+                    url: "api/v1/featureFilteredData" + query,
+                    contentType: "application/json",
+                    success: function (res) {
+                        $("#Products tbody th").remove();
+                        var tableBody = $('#Products tbody');
+                        tableBody.append($("<th style='padding- left:10px;'></th>").html(res.FeatureID));
+                        tableBody.append($("<th style='padding- left:20px;'></th>").html(res.FeatureName));
+                        $.each(res.Features, function (data, value) {
+
+                            $("#ddlFeatures").append($("<th style='padding- left:10px;'></th>").html(value.FeatureName));
+                        })
+                    }
+                });
+            })
+
+        </script>
+</body>
+</html>
+

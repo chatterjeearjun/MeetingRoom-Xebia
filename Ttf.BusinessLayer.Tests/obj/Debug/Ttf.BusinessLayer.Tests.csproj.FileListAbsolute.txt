@@ -1,0 +1,10 @@
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\bin\Debug\Ttf.BusinessLayer.Tests.dll
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\bin\Debug\Ttf.BusinessLayer.Tests.pdb
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\bin\Debug\nunit.framework.dll
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\bin\Debug\Ttf.BusinessLayer.dll
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\bin\Debug\Ttf.BusinessLayer.pdb
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\bin\Debug\nunit.framework.xml
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\obj\Debug\Ttf.BusinessLayer.Tests.csprojResolveAssemblyReference.cache
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\obj\Debug\Ttf.BusinessLayer.Tests.csproj.CoreCompileInputs.cache
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\obj\Debug\Ttf.BusinessLayer.Tests.dll
+C:\Users\chatt\Desktop\MeetingRoom\TTF-master\Ttf.BusinessLayer.Tests\obj\Debug\Ttf.BusinessLayer.Tests.pdb
